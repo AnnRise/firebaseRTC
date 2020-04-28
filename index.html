@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="apple-mobile-web-app-capable" content="YES">
+	<title>Welcome to FirebaseRTC</title>
+
+	<!-- update the version number as needed -->
+	<script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
+	<!-- include only the Firebase features as you need -->
+	<script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-firestore.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-database.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-performance.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-storage.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-messaging.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+
+<body>
+	<div class="video__modal" id="videoConnect">
+		<button class="btn btn-video" id="callButton" type="button">Подключиться</button>
+	</div>
+
+	<div class="video__wrap" id="videos">
+		<video class="video video-your" id="your" muted autoplay playsinline></video>
+		<video class="video video-user" id="user" autoplay playsinline></video>
+
+		<div class="video__icon">
+			<button class="video__btn video__btn-audio" title="Mute audio" id="muteAudioButton"></button>
+			<button class="video__btn video__btn-video" title="Mute video" id="muteVideoButton"></button>
+			<button class="video__btn video__btn-full" title="Fullscreen" id="fullscreenButton"></button>
+			<button class="video__btn video__btn-hangup" title="Hangup" id="hangupButton" style="display:none"></button>
+		</div>
+	</div>
+
+	<script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+	<script src="app.js"></script>
+</body>
+</html>
